@@ -5,11 +5,11 @@
 </p>
 
 <div class="cart-item" *ngFor="let item of items">
-  <span>{{ item.name }}</span>
+  <span>{{ item.name }} </span>
   <span>{{ item.price | currency }}</span>
 </div>
 
-<form [formGroup]="checkoutForm" (ngSubmit="onSubmit(checkoutForm.value)")>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
 
   <div>
     <label for="name">
